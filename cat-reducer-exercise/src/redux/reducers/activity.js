@@ -1,8 +1,15 @@
 // import my action types
-import { ACTION_NAP, ACTION_EAT, ACTION_PLAY } from '../actionTypes';
+import { 
+    ACTION_NAP, 
+    ACTION_EAT, 
+    ACTION_PLAY, 
+    ACTION_BLEP,
+    ACTION_GUSTER 
+} from '../actionTypes';
 
 const initialState = {
-    activity: 'napping'
+    activity: 'napping',
+    name: 'cat'
 }
 
 const activityReducer = (state = initialState, action) => {
@@ -23,6 +30,18 @@ const activityReducer = (state = initialState, action) => {
             return {
                 ...state,
                 activity: "playing"
+            }
+        }
+        case ACTION_BLEP: {
+            return {
+                ...state,
+                activity: "blepping"
+            }
+        }
+        case ACTION_GUSTER: {
+            return {
+                ...state,
+                name: "Guster"
             }
         }
         default:

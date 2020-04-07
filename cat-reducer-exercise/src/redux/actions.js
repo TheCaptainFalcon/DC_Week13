@@ -1,4 +1,10 @@
-import { ACTION_NAP, ACTION_EAT, ACTION_PLAY } from './actionTypes';
+import { 
+    ACTION_NAP, 
+    ACTION_EAT, 
+    ACTION_PLAY, 
+    ACTION_BLEP, 
+    ACTION_GUSTER 
+} from './actionTypes';
 
 export const nap = () => {
     return {
@@ -15,5 +21,17 @@ export const eat = () => {
 export const play = () => {
     return {
         type: ACTION_PLAY
+    }
+}
+
+export const blep = () => {
+    return {
+        type: ACTION_BLEP
+    }
+}
+
+export const guster = () => {
+    return {
+        type: ACTION_GUSTER
     }
 }
